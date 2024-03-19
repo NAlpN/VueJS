@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJS Giriş</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="AppOne">Merhaba {{message}}</div>
+    <script>
+        const { createApp, ref } = Vue
+      
+        createApp({
+          setup() {
+            const message = ref('Vue!')
+            return {
+              message
+            }
+          }
+        }).mount('#AppOne')
+      </script>
+</body>
+</html>
